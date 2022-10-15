@@ -1,10 +1,6 @@
-from loop import Asking
+from loop import Asking, Existing
 from clients import Clients 
 import os
-
-
-
-
 
 
 while True:
@@ -21,9 +17,6 @@ BIENVENIDO AL BANCO NACIONAL
 1. Abrir una nueva cuenta
 2. Ver cuenta existente
 3. Salir
-
-
-
 _____________________________________
 
 """
@@ -31,6 +24,8 @@ _____________________________________
   if selection == "1":
     print("\nHola, a continuación te pediremos unos datos para crear tu cuenta.\n")
     Asking()
+  elif selection == "2":
+    Existing()
   elif selection == "3":
     exit()
     
