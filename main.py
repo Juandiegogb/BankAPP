@@ -5,11 +5,11 @@ import os
 
 
 while True:
-    os.system("exit")
-    os.system("cls")
-    C = Clients()
-    selection = input(
-        """
+  os.system("exit")
+  os.system("cls")
+  C = Clients()
+  selection = input(
+      """
 
 _____________________________________
 
@@ -23,15 +23,12 @@ _____________________________________
 
 """
     )
-    if selection == "1":
-        print("\nHola, a continuación te pediremos unos datos para crear tu cuenta.\n")
-        Asking()
-    elif selection == "2":
-        try:
-            Existing()
-        except UnboundLocalError:
-            print("\nCuenta no encontrada, crea una \n")
-            time.sleep(2)
-            Asking()
-    elif selection == "3":
-        exit()
+  if selection == "1":
+    print("\nHola, a continuación te pediremos unos datos para crear tu cuenta.\n")
+    Asking()
+  elif selection == "2":
+    id = input("\nIngresa tu número de identificación: ")
+    Existing(id = id.strip())
+    
+  elif selection == "3":
+    exit()
