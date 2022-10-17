@@ -4,12 +4,11 @@ class Clients ():
       self.listClients = [clients.replace("\n","")  for clients in clients.readlines() if clients != "\n" ]
       self.listClients = [clients.split("-") for clients in self.listClients]
       self.listClients.pop(0)
+      self.dictClients = {clients[1]:(clients[0],clients[2],clients[3]) for clients in self.listClients}
 
 
-  def lookingForUser(self,ID):
-    for i in self.listClients:
-      if ID == i[1]:
-        return i
+  def lookingForUser(self,id):
+    return self.dictClients.get(id)
 
     
     
